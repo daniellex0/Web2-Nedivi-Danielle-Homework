@@ -27,10 +27,13 @@ const TemplateStyled = styled.div`
 
     .Aside {
         flex: 0 0 200px;
-        background-color: teal;
+        padding: 20px;
+        border-right: solid 1px #eee;
     }
     .Article {
         flex: 1;
+        padding: 20px;
+        min-height: 500px;
     }
     
 `;

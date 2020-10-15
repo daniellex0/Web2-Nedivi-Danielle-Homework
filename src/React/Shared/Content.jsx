@@ -5,11 +5,11 @@ import { Switch, Route } from 'react-router-dom';
 /* Components ---------------------------*/
 import Login from '../Pages/Login.jsx';
 import Home from '../Pages/Home.jsx';
-import Auction from '../Pages/Auction.jsx';
+import Auction from '../Pages/Auction/Auction.jsx';
 import Contact from '../Pages/Contact.jsx';
 import Homework from '../Pages/Homework/Homework.jsx';
 
-const Content = () => {
+const Content = ({auction}) => {
 
     return (
         <ContentStyled className='Content'>

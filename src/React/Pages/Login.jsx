@@ -8,10 +8,7 @@ const Login = () => {
 
     return (
         <LoginStyled className='Login'>
-            <Template
-                title='Login'
-                aside={ true }
-            > 
+            <Template title='Login'> 
                 Login
             </Template >
         </LoginStyled>
