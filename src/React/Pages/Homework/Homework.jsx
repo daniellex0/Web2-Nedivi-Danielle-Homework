@@ -130,7 +130,7 @@ const essays = [
                     <p>
                         Middleware is software that connects an operating system and the applications that are running it,
                         and is sometimes described as 'software glue' or even 'plumbing' because it allows data to be
-                        passed between 'pipes. It is a hidden layer that translates/ communicates between the operating 
+                        passed through 'pipes'. It is a hidden layer that translates/ communicates between the operating 
                         system and application, and allows data management. Middleware allows users to perform requests
                         like submitting forms, and allows web servers to return web pages based on a user's profile.
                     </p>
