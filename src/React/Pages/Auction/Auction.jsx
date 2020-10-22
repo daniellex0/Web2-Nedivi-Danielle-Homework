@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
 
 /* Components ---------------------------*/
 import Template from '../../Shared/Template.jsx';
+import AuctionNav from './AuctionNav.jsx';
+import BidManager from './BidManager/BidManager.jsx';
 import Lots from './Lots/Lots.jsx';
 
 const Auction = () => {
@@ -10,7 +13,11 @@ const Auction = () => {
     return (
         <AuctionStyled className='Auction'>
             <Template title='Auction'>
-                <Lots />
+                <AuctionNav />
+                <Switch>
+                    <Route path='/auction/bids' component={ BidManager } />
+                    <Route path='/auction' component = { Lots } />
+                </Switch>
             </Template> 
         </AuctionStyled>
     );

@@ -128,8 +128,8 @@ const essays = [
             return (
                 <div>
                     <p>
-                        Middleware is software that connects an operating system and the applications that are running it,
-                        and is sometimes described as 'software glue' or even 'plumbing' because it allows data to be
+                        Middleware is software that is like the "software glue" between an operating system and the applications 
+                        that are running it, it is also known as 'plumbing' because it allows data to be
                         passed through 'pipes'. It is a hidden layer that translates/ communicates between the operating 
                         system and application, and allows data management. Middleware allows users to perform requests
                         like submitting forms, and allows web servers to return web pages based on a user's profile.
@@ -142,6 +142,56 @@ const essays = [
                         applications where different components perform the same action- they can just reuse the same 
                         function to do so using thunk middleware. In programming, Thunks are typically used to delay an 
                         action until it is needed, or to insert operations at the beginning or end of action.
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '05',
+        question: 'In Redux, what does mutating state mean? Why is this something we would like to avoid?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                        Mutating state in Redux means that the value of a variable or object changes over time,
+                        or mutates. There are references between the old and new state at the same time.
+                    </p>
+                    <p>
+                        Mutation is something we would like to avoid because mutating state can lead to bugs,
+                        hurts the performance, and leads to testing difficulties and can make it difficult to 
+                        optimize components, especially in larger apps that might have several changes of state 
+                        fired off at the same time. State mutation is the cause of most bugs in apps. We prefer 
+                        to have pure components that have less of a chance of mutating.
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '06',
+        question: 'What are the ingredients of a code review in Web Development?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                        Code review is an important in web development, which helps detect bugs early on before the testing
+                        phase by having another pair of eyes on your code. Code Review can be conducted by developers, QA, 
+                        peers, seniors, or juniors. Code review aims to standardize and harmonize all of the existing code by a team.
+                    </p>
+                    <p>
+                        Code review includes checking syntax (indentation, alignment, missing semicolons, etc), code reusability/
+                        duplicate code (following DRY- don't repeat yourself, so you don't reinvent the wheel and reuse existing
+                        code/components), code logic/technical quality (whether the code is logical and the best way to accomplish
+                        the goal), naming conventions (making sure class names, etc. follow the conventions that already exist on
+                        the site to stay consistent and make sure the code is understandable for other developers), unused code
+                        (remove any unecessary/superfluous code including classnames that have no use), simplicity (trying to make
+                        sure code is as simple as possible is ideal- not overly complicated and convoluted), scalability and security.
+                    </p>
+                    <p>
+                        The steps of a code review often include a preliminary demo (or demo video) to other members of the team. 
+                        During the code review, the reviewer often goes through a first pass, running tests, doing an in-depth pass,
+                        and finally submitting an evaluation.
                     </p>
                 </div>
             );
