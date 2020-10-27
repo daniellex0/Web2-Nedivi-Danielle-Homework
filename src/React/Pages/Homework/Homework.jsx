@@ -175,7 +175,7 @@ const essays = [
             return (
                 <div>
                     <p>
-                        Code review is an important in web development, which helps detect bugs early on before the testing
+                        Code review is an important step in web development, which helps detect bugs early on before the testing
                         phase by having another pair of eyes on your code. Code Review can be conducted by developers, QA, 
                         peers, seniors, or juniors. Code review aims to standardize and harmonize all of the existing code by a team.
                     </p>
@@ -192,6 +192,31 @@ const essays = [
                         The steps of a code review often include a preliminary demo (or demo video) to other members of the team. 
                         During the code review, the reviewer often goes through a first pass, running tests, doing an in-depth pass,
                         and finally submitting an evaluation.
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '07',
+        question: 'What is the difference between Action Types, Action Creators, and Reducers (Redux)?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                        In Redux, actions are javascript objects and they need to have a type property that describes the kids of
+                        action being performed. Types are usually described as string constants/are stored in enumerations. You don't 
+                        have to define action types. (Actions are information that send data from your application to your store in Redux.)
+
+                    </p>
+                    <p>
+                        Action Creators are functions that create actions (they are functions that return an action object). In redux, 
+                        action creators simply return an action. 
+                    </p>
+                    <p>
+                        Reducers are functions that determine changes to an application's state. With it you can reduce multiple
+                        actions and initial state to get the resulting final state. A reducer is a pure state that takes the current state 
+                        and an action and returns the next state.
                     </p>
                 </div>
             );

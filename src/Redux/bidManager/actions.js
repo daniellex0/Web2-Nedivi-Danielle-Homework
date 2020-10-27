@@ -64,7 +64,7 @@ export const removeLotToBids = (lot) => {
 
         // Cloning
         let newBids = bids.filter((bid) => {
-            return (bid.lot.id != lot.id);
+            return (bid.lot.id !== lot.id);
         });
 
         // Trigger Action Creator with new Bids
