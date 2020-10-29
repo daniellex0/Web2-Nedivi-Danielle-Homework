@@ -204,19 +204,40 @@ const essays = [
             return (
                 <div>
                     <p>
-                        In Redux, actions are javascript objects and they need to have a type property that describes the kids of
-                        action being performed. Types are usually described as string constants/are stored in enumerations. You don't 
-                        have to define action types. (Actions are information that send data from your application to your store in Redux.)
-
+                        In Redux, actions are javascript objects (they send data from your application to your store in Redux) and they need 
+                        to have a type property that describes the kinds of action being performed. Types are usually described as string 
+                        constants (within quotes), which is good for troubleshooting. This is the glue between our action creators and
+                        action reducers.
                     </p>
                     <p>
-                        Action Creators are functions that create actions (they are functions that return an action object). In redux, 
-                        action creators simply return an action. 
+                        Action Creators are functions that create actions (they are functions that return an action object). Action creators 
+                        simply return an action. Its main purpose is to return a piece of state that will then be reduced. That then gets
+                        reduced by the reducer.
                     </p>
                     <p>
                         Reducers are functions that determine changes to an application's state. With it you can reduce multiple
                         actions and initial state to get the resulting final state. A reducer is a pure state that takes the current state 
-                        and an action and returns the next state.
+                        and an action and returns the next state. Actions go through reducers to get to the store (reducer's main task
+                        is to update the store).
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '08',
+        question: 'What does the spread operator do in Javascript? How does this help Redux reducers keep the state f... ',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                        ...
+                    </p>
+                    <p>
+                        ...
+                    </p>
+                    <p>
+                        ...
                     </p>
                 </div>
             );

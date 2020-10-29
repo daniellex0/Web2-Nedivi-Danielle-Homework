@@ -29,7 +29,7 @@ const AddRemoveLot = ({ lot }) => {
         }
 
         const handleRemoveLot = () => {
-            console.log('You click me. And I should add a lot to bids');
+            console.log('Remove lot');
             dispatch(removeLotToBids(lot));
         }
 
