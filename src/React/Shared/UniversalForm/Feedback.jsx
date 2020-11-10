@@ -20,7 +20,7 @@ const Feedback = () => {
     } = state;
 
     const handleClose = () => {
-        dispatch(UFActions.feedbackMessageUpdate('pending'));
+        dispatch(UFActions.statusUpdate('pending'));
     }
     
     if (formStatus === 'pending') {

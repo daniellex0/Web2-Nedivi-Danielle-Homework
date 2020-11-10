@@ -14,6 +14,7 @@ import Button from './Controls/Button.jsx';
 const UniversalForm = ({
     formData=[],
     submitText='Submit',
+    apiEndpoint,
     onSubmit,
 }) => {
 
@@ -22,9 +23,10 @@ const UniversalForm = ({
     ---------------------------*/
     const initialState = {
         formData: formData,
-        formStatus:  'pending',
+        formStatus: 'pending',
         feedbackMessage: 'no message',
         submitText: submitText,
+        apiEndpoint: apiEndpoint,
         onSubmit: onSubmit,
     }
 

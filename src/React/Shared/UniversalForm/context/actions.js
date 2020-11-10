@@ -1,4 +1,5 @@
 import { ActionTypes } from './actionTypes.js';
+import API from 'common/API.js';
 
 /*===================================
 || 
@@ -17,7 +18,7 @@ export const statusUpdate = (formStatus) => {
         formStatus: formStatus,
     }
 }
-export const feedbackMessageUpdate = (feedbackMessage) = {
+export const feedbackMessageUpdate = (feedbackMessage) => {
     return {
         type: ActionTypes.UF_FEEDBACK_MESSAGE_UPDATE,
         feedbackMessage: feedbackMessage,
@@ -42,13 +43,14 @@ export const handleOnInputChange = (newFormField, formData) => {
 export const handleOnSubmit = (state, dispatch) => {
     const {
         formData,
+        apiEndpoint,
         onSubmit,
     } = state;
 
     // Validate from data
     let errors = false;
     formData.forEach((field) => {
-        if (field.value.length < 1) {
+        if (field.value.length && field.value.length < 1) {
             errors = true;
             dispatch(feedbackMessageUpdate(`The ${field.id} is required`));
         }
@@ -60,11 +62,15 @@ export const handleOnSubmit = (state, dispatch) => {
     } else {
 
         // Let parent know of submission
-        onSubmit(formData);
+        API.post(apiEndpoint, formData).then((apiResponse) => {
+            console.log('UF Actions: apiResponse', apiResponse);
 
-        // all passes we will submit data
-        dispatch(feedbackMessageUpdate(`'Eurka, you passed our validation.'`));
-        dispatch(statusUpdate('success'));
+            // all passes we will submit data
+            dispatch(feedbackMessageUpdate(`'Eureka, you passed our validation.'`));
+            dispatch(statusUpdate('success'));
+            onSubmit(apiResponse.data);
+        });
+        
     }
 }
 

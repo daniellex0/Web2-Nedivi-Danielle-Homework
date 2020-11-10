@@ -226,18 +226,76 @@ const essays = [
     },
     {
         title: '08',
-        question: 'What does the spread operator do in Javascript? How does this help Redux reducers keep the state f... ',
+        question: 'What does the spread operator do in Javascript? How does this help Redux reducers keep the state from mutating ?',
         AnswerComponent: () => {
             return (
                 <div>
                     <p>
-                        ...
+                        The spread operator is a new addition to the operators in Javascript ES6, and it is marked by three dots (...). It takes in 
+                        an array and expands it into separate individual elements. Spread operator is typically used to make shallow
+                        copies/duplicates of JS objects, making the code more concise and readable. It 'spreads' items in an array/object to a receiver.
+                        It is a useful and quick syntax for adding items to arrays, combining arrays or objects, and spreading an array out into a function's 
+                        arguments. However this doesn't work in deep copies (only shallow)- so it's better for simple logic, but not anything that is 
+                        deeper/nested. It allows you to keep/duplicate an object and only modify certain elements of the object. 
                     </p>
                     <p>
-                        ...
+                        This helps Redux reducers keep the state from mutating by helping make copies (new instances) of arrays/objects 
+                        to prevent accidental variable overlap/mutation. It makes a shallow copy instead of reference. When you reference 
+                        a variable multiple times, it can update that variable, which can be problematic if you're trying to keep the the state 
+                        as pure as possible. Instead it clones / creates a completely new version. 
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '09',
+        question: 'What are some of the challenges of loading Redux state from a webserver and some of the solutions. (keyword to google for first part of q: how do we handle preloaded state in Redux?)',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    When we use Redux with server rendering, we preload data before generating the HTML and want the client to have access to 
+                    this data when they need it. 
                     </p>
                     <p>
-                        ...
+                    A redux app is like a chicken and egg problem, in that given a state the app should render a certain action, but that state needs to come from somewhere.
+                    We need to ship data to the web app in order to show it (and we don't always need to show it right away). We need to make the website as 
+                    fast as possible (so we only need to load the data we need when we need them). Only when we reach an actual page do we need to pull that data and display it on the page. 
+                    It's give and take- when the site first loads we can ship some data, but not all of it. Then when you are ready for certain data, you can ship that (when you're on a specific page).
+                    Some challenges are: we cannot show content until it's loaded, and we use React components when they mount to request data (Ajax)
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '10',
+        question: 'In Javascript, what is the difference between const, let and var',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    const variables maintain a constant value. Similar to let declarations, const declarations can only be accessed within the block they are declared.
+                    Const cannot be updated or redecalared, meaning that the value of a const variable remains the same within its scope. If you try to change a const 
+                    variable, you will get an error.
+                    </p>
+                    <p>
+                    let is generally preferred for variable declaration. Let is block scoped (like const), meaning it is bounded by {}. A variable in a block with let is 
+                    only available for us within that block. Like var, a let variable can be updated (within its block scope in let's case). However unlike var, a let variable
+                    can't be re-declared within its block scope. Let is a better choice than var in many instances because you don't have to worry about reusing 
+                    a variable name since let variables only exist within their block scope. Let declarations are hoisted to the top, and so if you try to use a let 
+                    variable before declaration you will get an error. 
+                    
+                    </p>
+                    <p>
+                    var - before the release of JS ES6, var was the only way to declare a variable. Var declarations are globally scoped or function scoped (while let and const
+                    are block scoped). Var isn't used as much now there there is const and let, but it does still have some uses. Var variables can be redeclared endlessly 
+                    with no error, unlike let.
+                    </p>
+                    <p>
+                    Var variables can be updated and redeclared within its block scope; let variables can be updated but not re-declared; const variables can do 
+                    neither. 
                     </p>
                 </div>
             );
