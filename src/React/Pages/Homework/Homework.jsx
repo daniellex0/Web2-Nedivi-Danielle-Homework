@@ -294,8 +294,32 @@ const essays = [
                     with no error, unlike let.
                     </p>
                     <p>
-                    Var variables can be updated and redeclared within its block scope; let variables can be updated but not re-declared; const variables can do 
+                    var variables can be updated and redeclared within its block scope; let variables can be updated but not re-declared; const variables can do 
                     neither. 
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '11',
+        question: 'What does javascript destructuring do?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    Object destructuring in javascript is a convenient feature from version ES6 for extracting properties from objects and binding
+                    them to variables. In fact it can extract several properties in one statement, access properties from 
+                    nested objects, and set a default value if the property doesn't exist. Destructuring an object into 
+                    multiple properties is possible just by separating as many properties as you want by comma. It is also 
+                    possible to nest objects in other objects within js destructuring syntax.
+                    </p>
+                    <p> 
+                    Without object destructuring, you have to repeat the property name multiple times. Object destructuring allows you to use more 
+                    brief and less repetitive code, and at the same time is a quick way to do multiple things- like defining 
+                    variables, assigning property values to them, and applying a default value at the same time. This code 
+                    is more concise, readable, and clear. This is especially useful in React where data is deeply nested in props.
+                    or state   
                     </p>
                 </div>
             );

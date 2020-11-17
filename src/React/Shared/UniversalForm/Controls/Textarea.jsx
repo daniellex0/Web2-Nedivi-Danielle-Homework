@@ -31,7 +31,7 @@ const Textarea = ({ formField }) => {
 
 export default Textarea;
 
-const TextareaStyled = styled.div`
+const TextareaStyled = styled.textarea`
     background-color: #fff;
     font-size: 16px;
     padding: 5px 10px;
