@@ -347,21 +347,23 @@ const essays = [
     },
     {
         title: '13',
-        question: 'In React, what is a controlled input?',
+        question: 'Which is more important, Server-Side or Client-Side validation and why?',
         AnswerComponent: () => {
             return (
                 <div>
                     <p>
-                    ...
+                    Server-side validation is where the information input by a user is sent to the server and validated by it,
+                    whereas client-side validation is where user input is sent to and validated by the web browser.
                     </p>
                     <p>
-                    ...
+                    Server-side validation is more important than client-side validation because it is much more secure
+                    against hackers and other malicious actors, since important information and validation is on a secure 
+                    server that they have a harder time to access. Meanwhile with client-side validation, usually those users
+                    can easily bypass client-side scripting and submit potentially dangerous input to the server.
                     </p>
                     <p>
-                    ...
-                    </p>
-                    <p>
-                    ...
+                    Server-side validation can properly protect databases and server resources from hackers, whereas client side 
+                    cannot.
                     </p>
                 </div>
             );
