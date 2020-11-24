@@ -22,7 +22,7 @@ const Auction = () => {
                 }
                 <Switch>
                     <Route path='/auction/bids' component={ BidManager } />
-                    <Route path='/auction' component = { Lots } />
+                    <Route path='/auction' component = { Lots } exact />
                 </Switch>
             </Template> 
         </AuctionStyled>

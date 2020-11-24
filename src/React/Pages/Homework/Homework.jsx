@@ -277,7 +277,7 @@ const essays = [
                 <div>
                     <p>
                     const variables maintain a constant value. Similar to let declarations, const declarations can only be accessed within the block they are declared.
-                    Const cannot be updated or redecalared, meaning that the value of a const variable remains the same within its scope. If you try to change a const 
+                    Const cannot be updated or redeclared, meaning that the value of a const variable remains the same within its scope. If you try to change a const 
                     variable, you will get an error.
                     </p>
                     <p>
@@ -320,6 +320,48 @@ const essays = [
                     variables, assigning property values to them, and applying a default value at the same time. This code 
                     is more concise, readable, and clear. This is especially useful in React where data is deeply nested in props.
                     or state   
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '12',
+        question: 'In React, what is a controlled input?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    A controlled input in React allows more control over form management and keeping input state through Javascript. On the other 
+                    hand, uncontrolled input is the older method before React, which gave the browser control over keeping the state of the input.
+                    </p>
+                    <p>
+                    If we didn't provide value and input, we'd be relying on the broswer to provide all of that. But when we do control, we can do 
+                    validation, etc. Before with plain javascript we had to tell the browser not to do x or y. But with controlled input we say ok
+                    we'll take over from here. Any time user makes a change we keep track of that etc. We can see every character a user types in. 
+                    We have it in our control. Controlled input is when we use React to take over the onChange and value state of an input.
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '13',
+        question: 'In React, what is a controlled input?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    ...
+                    </p>
+                    <p>
+                    ...
+                    </p>
+                    <p>
+                    ...
+                    </p>
+                    <p>
+                    ...
                     </p>
                 </div>
             );

@@ -17,7 +17,7 @@ const Login = () => {
     | State and Props
     ---------------------------*/
     const { user } = useSelector((state) => state);
-
+    
     const [ showForm, showFormUpdate ] = useState(false);
 
     /*---------------------------
@@ -26,7 +26,6 @@ const Login = () => {
     const toggleShowForm = () => {
         showFormUpdate(!showForm);
     }
-
     const hideForm = () => {
         showFormUpdate(false);
     }
@@ -61,21 +60,20 @@ const Login = () => {
     /*---------------------------
     | Render
     ---------------------------*/
-
     return (
         <LoginStyled className='Login'>
-            <div className='top'> 
+            <div className="top">
                 <Toggle onClick={ toggleShowForm }/>
             </div>
             {
                 showForm &&
                 <div className="bottom" ref={ bottomRef }>
-                    
-                    {
-                        user.isLoggedIn
-                        ? <LogOut />
-                        : <Form />
-                    }
+
+                {
+                    user.isLoggedIn
+                    ? <LogOut />
+                    : <Form />
+                }
                 </div>
             }
         </LoginStyled>
@@ -103,8 +101,8 @@ const LoginStyled = styled.div`
         &::before {
             content: " ";
             display: block;
-            width: 0;
-            height: 0;
+            width: 0; 
+            height: 0; 
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 10px solid #ccc;

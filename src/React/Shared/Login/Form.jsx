@@ -13,28 +13,29 @@ const Form = () => {
     const dispatch = useDispatch();
 
     const defaultData = [
-        { id: 'username', value: '', required: true, label: 'Username', type: 'text', },
-        { id: 'password', value: '', required: true, label: 'Password', type: 'text', },
+        { id: 'email', value: '', required: true, label: 'Email', type: 'text', },
+        { id: 'password', value: '', required: true, label: 'Password', type: 'text',},
     ]
-
 
     const handleOnSubmit = (apiResponse) => {
         console.log('newFormData Posted From', apiResponse);
-        if (!apiResponse.errors) {
+        if (apiResponse.success) {
             const isLoggedIn = true;
-            const profile = apiResponse.profile;
-            dispatch(UserActions.userAuthUpdate(isLoggedIn, profile))
+            const profile = apiResponse.payload.user;
+            dispatch(UserActions.userAuthUpdate(isLoggedIn, profile));
+        } else {
+            console.log('We could not find the user.');
         }
     }
 
     return (
         <FormStyled className='Form'>
-            <UniversalForm
-                formData={ defaultData }
-                submitText='Log In'
-                apiEndpoint='/login/validate'
-                onSubmit={ handleOnSubmit }
-            />
+                <UniversalForm 
+                    formData={ defaultData } 
+                    submitText='Log In'
+                    apiEndpoint='/users/login'
+                    onSubmit={ handleOnSubmit }
+                /> 
         </FormStyled>
     );
 }

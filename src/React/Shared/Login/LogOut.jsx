@@ -15,15 +15,15 @@ const LogOut = () => {
 
     const handleLogOut = () => {
         console.log('You clicked me.');
-        dispatch(UserActions.userAuthUpdate(false,{}));
+        dispatch(UserActions.logOut());
     }
 
     return (
         <LogOutStyled className='LogOut'>
-            <Button
+            <Button 
                 onClick={ handleLogOut }>
-                Log { user.profile.first } out 
-            </Button>
+                    Log { user.profile.first } out
+                </Button>
         </LogOutStyled>
     );
 }

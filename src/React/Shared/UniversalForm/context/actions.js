@@ -49,11 +49,15 @@ export const handleOnSubmit = (state, dispatch) => {
 
     // Validate from data
     let errors = false;
+    let postData = {};
+
     formData.forEach((field) => {
-        if (field.value.length && field.value.length < 1) {
+        if (field.required && field.value.length < 1) {
             errors = true;
-            dispatch(feedbackMessageUpdate(`The ${field.id} is required`));
+            dispatch(feedbackMessageUpdate(`The ${field.id} is required.`));
         }
+
+        postData[field.id] = field.value
     });
 
     // if invalid, update error message
@@ -62,7 +66,7 @@ export const handleOnSubmit = (state, dispatch) => {
     } else {
 
         // Let parent know of submission
-        API.post(apiEndpoint, formData).then((apiResponse) => {
+        API.post(apiEndpoint, postData).then((apiResponse) => {
             console.log('UF Actions: apiResponse', apiResponse);
 
             // all passes we will submit data
