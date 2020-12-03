@@ -368,5 +368,33 @@ const essays = [
                 </div>
             );
         }
+    },
+    {
+        title: '14',
+        question: 'In React components, what are life cycle methods?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    React lifecycle methods can be thought of as the series of events that occur from the 
+                    'birth' to the 'death' of a React component. Ever React component goes through a lifecycle 
+                    of events - birth, growth, death. Mounting is the birth of the component; Update is the 
+                    growth of the component; and unmount is the death of the component. 
+                    </p>
+                    <p>
+                    The most common lifecycle method is render(). This is seen in all React classes because it 
+                    is the only required method within a React class component.This renders the component to the 
+                    UI, and is part of the mounting and update part of the lifecycle of the component. Render
+                    has to be pure (no side effects- always return the same output when the same input is passed).
+                    </p>
+                    <p>
+                    Other methods that aren't always used but are available for the mounting phase of the lifecycle 
+                    are constructor() [every time you make a component], getDerivedStatefromProps() [right before 
+                    render method], and componentDidMount() [when component is rendered]. There are similarly 
+                    more methods in updating and unmounting phases of the lifecycle.
+                    </p>
+                </div>
+            );
+        }
     }
 ];
