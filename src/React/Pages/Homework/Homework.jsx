@@ -429,19 +429,40 @@ const essays = [
             return (
                 <div>
                     <p>
-                    Fat arrow functions were introduced with ES6 as a new syntax for writing Javascript functions. They save
-                    time and simplify function scope, and are one of the most popular new ES6 features. An arrow function starts 
-                    with a list of parameters in parentheses, followed by a fat arrow, and then a pair of curly braces that delimits
-                    the body statements.
+                    The conditional ternary operator is the only JavaScript operator that takes three operands: a condition followed 
+                    by a question mark ?, then an expression to execute if the condition is truthy followed by a colon (:), and finally 
+                    the expression to execute if the condition is falsy. This operator is frequently used as a shortcut for the if statement.
                     </p>
                     <p>
-                    Arrow functions are anonymous (meaning they are not named) and change the way "this" binds in functions. By using arrow functions, 
-                    developers avoid having to type the "function" keyword, "return" keyword, and curly brackets.
+                    In this example, you can use the ternary operator as the shortcut for the if-else statement as follows:
+                    In general, the syntax of the ternary operator is as follows: condition ? expression_1 : expression_2;
+                    The JavaScript ternary operator is the only operator that takes three operands. The condition is an expression that 
+                    evaluates to a Boolean value, either true or false. If the condition is true, the ternary operator returns expression_1, 
+                    otherwise it returns the expression_2. The expression_1, and expression_2 are expressions of any type.
                     </p>
                     <p>
-                    There are other types of functions, such as the function constructor and generator function (requires a * star) 
-                    constructor, but they are not generally recommended because they have specific requirements (at least according
-                    to Mozilla).
+                    You can use the ternary operator as a shortcut of the if-else statement to make your code cleaner.
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '17',
+        question: 'What is the difference between SQL and NoSQL databases? What are the advantages and disadvantages of each?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    Mongo is NoSQL, and MySQL is SQL. SQL is a relational database. NoSQL is a little more flexible- allows
+                    you to be a little more organic with a database, and also is much easier to search
+                    Downwisde when using something like Mongo is connecting the dots.
+                    </p>
+                    <p>
+                    ...
+                    </p>
+                    <p>
+                    ...
                     </p>
                 </div>
             );
