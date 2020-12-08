@@ -398,8 +398,33 @@ const essays = [
         }
     },
     {
-        title: '14',
+        title: '15',
         question: 'In JavaScript, what is a Fat Arrow function? Are there other types of Functions?',
+        AnswerComponent: () => {
+            return (
+                <div>
+                    <p>
+                    Fat arrow functions were introduced with ES6 as a new syntax for writing Javascript functions. They save
+                    time and simplify function scope, and are one of the most popular new ES6 features. An arrow function starts 
+                    with a list of parameters in parentheses, followed by a fat arrow, and then a pair of curly braces that delimits
+                    the body statements.
+                    </p>
+                    <p>
+                    Arrow functions are anonymous (meaning they are not named) and change the way "this" binds in functions. By using arrow functions, 
+                    developers avoid having to type the "function" keyword, "return" keyword, and curly brackets.
+                    </p>
+                    <p>
+                    There are other types of functions, such as the function constructor and generator function (requires a * star) 
+                    constructor, but they are not generally recommended because they have specific requirements (at least according
+                    to Mozilla).
+                    </p>
+                </div>
+            );
+        }
+    },
+    {
+        title: '16',
+        question: 'In JavaScript, what is a ternary operator?',
         AnswerComponent: () => {
             return (
                 <div>
