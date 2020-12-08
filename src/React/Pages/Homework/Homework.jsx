@@ -429,16 +429,13 @@ const essays = [
             return (
                 <div>
                     <p>
-                    The conditional ternary operator is the only JavaScript operator that takes three operands: a condition followed 
-                    by a question mark ?, then an expression to execute if the condition is truthy followed by a colon (:), and finally 
-                    the expression to execute if the condition is falsy. This operator is frequently used as a shortcut for the if statement.
+                    The conditional ternary operator is the only JavaScript operator that takes three parts: a condition followed 
+                    by a question mark ?, then an expression to execute if the condition is true followed by a colon :, and finally 
+                    the expression to execute if the condition is false. This operator is frequently used as a shortcut for the if/else statement.
                     </p>
                     <p>
-                    In this example, you can use the ternary operator as the shortcut for the if-else statement as follows:
-                    In general, the syntax of the ternary operator is as follows: condition ? expression_1 : expression_2;
-                    The JavaScript ternary operator is the only operator that takes three operands. The condition is an expression that 
-                    evaluates to a Boolean value, either true or false. If the condition is true, the ternary operator returns expression_1, 
-                    otherwise it returns the expression_2. The expression_1, and expression_2 are expressions of any type.
+                    In general, you can use the ternary operator as the shortcut for the if-else statement the following way: condition ? expression_1 : expression_2;
+                    The JavaScript ternary operator is the only operator that takes three operands.  
                     </p>
                     <p>
                     You can use the ternary operator as a shortcut of the if-else statement to make your code cleaner.
@@ -457,12 +454,6 @@ const essays = [
                     Mongo is NoSQL, and MySQL is SQL. SQL is a relational database. NoSQL is a little more flexible- allows
                     you to be a little more organic with a database, and also is much easier to search
                     Downwisde when using something like Mongo is connecting the dots.
-                    </p>
-                    <p>
-                    ...
-                    </p>
-                    <p>
-                    ...
                     </p>
                 </div>
             );
